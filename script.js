@@ -8,17 +8,30 @@ document.querySelectorAll('#navlinks a').forEach(function (a) {
   });
 });
 
-// Quote form
-// NOTE: This is a front-end demo. To receive real leads, connect this form
-// to a service like Formspree, Netlify Forms, or your own backend.
-// See README.md for instructions.
-function submitQuote() {
-  var name = document.getElementById('name').value.trim();
-  var phone = document.getElementById('phone').value.trim();
-  if (!name || !phone) {
-    alert('Please add at least your name and phone number so we can reach you.');
-    return;
-  }
-  document.getElementById('formView').style.display = 'none';
-  document.getElementById('successView').classList.add('show');
-}
+// Quote form -> Formspree (AJAX so the visitor stays on the page)
+document.getElementById('formView').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function (res) {
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('successView').classList.add('show');
+    } else {
+      alert('Something went wrong sending your request. Please try again or call us directly.');
+      btn.disabled = false;
+      btn.textContent = 'Request my quote';
+    }
+  }).catch(function () {
+    alert('Network error. Please try again or call us directly.');
+    btn.disabled = false;
+    btn.textContent = 'Request my quote';
+  });
+});
