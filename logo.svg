@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="520" height="200">
+  <!-- Option 1: Compass Wave — circular badge, north-star point over water -->
+  <defs>
+    <linearGradient id="pool1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d7e92"/>
+      <stop offset="1" stop-color="#064450"/>
+    </linearGradient>
+  </defs>
+
+  <!-- badge -->
+  <circle cx="100" cy="100" r="78" fill="url(#pool1)"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#0c2a30" stroke-width="3"/>
+  <circle cx="100" cy="100" r="68" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+
+  <!-- north star / pioneer point -->
+  <path d="M100 34 L108 74 L100 66 L92 74 Z" fill="#f2b441"/>
+
+  <!-- waves -->
+  <path d="M42 104 Q56 92 70 104 T98 104 T126 104 T158 104" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M50 126 Q63 115 76 126 T102 126 T128 126 T152 126" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- wordmark -->
+  <text x="205" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#0c2a30" letter-spacing="0.5">Pioneer</text>
+  <text x="206" y="132" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="400" fill="#0a6b7c" letter-spacing="6">POOL CARE</text>
+  <line x1="207" y1="146" x2="440" y2="146" stroke="#f2b441" stroke-width="3"/>
+</svg>
