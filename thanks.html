@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Pioneer Pool Care</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--pool:#0a6b7c;--pool-dark:#064450;--surface:#0d7e92;--sun:#f2b441;--sand:#f6f2e9;--ink:#0c2a30;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:linear-gradient(165deg,var(--pool) 0%,var(--pool-dark) 100%);
+    color:#fff;min-height:100vh;
+    display:grid;place-items:center;padding:24px;position:relative;overflow:hidden;
+  }
+  body::before{content:"";position:absolute;inset:0;opacity:.5;
+    background:radial-gradient(60% 50% at 80% 12%,rgba(242,180,65,.25),transparent 60%),
+    repeating-linear-gradient(125deg,transparent 0 22px,rgba(255,255,255,.035) 22px 24px)}
+  .card{position:relative;text-align:center;max-width:560px}
+  .logo{margin:0 auto 28px;display:block}
+  h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700;line-height:1.1}
+  h1 em{font-style:italic;color:var(--sun)}
+  p{margin-top:20px;font-size:1.12rem;color:rgba(255,255,255,.85);line-height:1.6}
+  .next{margin-top:32px;padding:22px 24px;background:rgba(255,255,255,.1);border-radius:16px;text-align:left}
+  .next h2{font-family:'Fraunces',serif;font-size:1.1rem;margin-bottom:12px;color:var(--sun)}
+  .next ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.95rem;color:rgba(255,255,255,.85)}
+  .next li{display:flex;gap:10px}
+  .next li::before{content:"→";color:var(--sun);flex:none}
+  a.home{display:inline-block;margin-top:32px;background:var(--sun);color:var(--ink);
+    padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+  a.home:hover{transform:translateY(-2px)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <svg class="logo" viewBox="0 0 200 200" width="76" height="76" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d7e92"/><stop offset="1" stop-color="#064450"/></linearGradient></defs>
+      <circle cx="100" cy="100" r="92" fill="url(#g)"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#0c2a30" stroke-width="4"/>
+      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+      <path d="M100 22 L110 70 L100 60 L90 70 Z" fill="#f2b441"/>
+      <path d="M32 105 Q48 91 64 105 T96 105 T128 105 T168 105" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <path d="M42 131 Q57 118 72 131 T102 131 T132 131 T160 131" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+
+    <h1>Request <em>received.</em></h1>
+    <p>Thanks for reaching out to Pioneer Pool Care. We've got your details and we'll be in touch within 24 hours.</p>
+
+    <div class="next">
+      <h2>What happens next</h2>
+      <ul>
+        <li>We'll call or email to learn a bit more about your pool</li>
+        <li>We schedule a free walkthrough at your convenience</li>
+        <li>You get a clear, flat weekly price — no obligation</li>
+      </ul>
+    </div>
+
+    <a class="home" href="/">Back to homepage</a>
+  </div>
+</body>
+</html>
